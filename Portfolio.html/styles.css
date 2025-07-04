@@ -1,0 +1,155 @@
+/* 기본 스타일 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .nav {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav li a:hover {
+  color: #00aaff;
+}
+
+/* 섹션 기본 스타일 */
+.section {
+  padding: 60px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.my-4 {
+  margin: 40px 0;
+}
+
+.my-5 {
+  margin: 50px 0;
+}
+
+/* 홈 섹션 디자인 */
+.hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+/* About 섹션 */
+.about {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about p {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* 프로젝트 섹션 */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+  font-size: 1em;
+}
+
+/* 연락처 섹션 */
+.contact-form input,
+.contact-form button {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1.1em;
+}
+
+.contact-form button {
+  background-color: #00aaff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0077cc;
+}
+
+/* 푸터 */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.footer;
