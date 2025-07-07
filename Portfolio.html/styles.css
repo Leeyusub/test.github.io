@@ -50,26 +50,34 @@ body {
   padding: 60px 0;
 }
 
+.section-divider {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 2px solid #00aaff;
+  opacity: 0.2;
+  position: relative;
+}
+
 .text-center {
   text-align: center;
 }
 
 .my-4 {
-  margin: 40px 0;
-}
-
-.my-5 {
   margin: 50px 0;
 }
 
+.my-5 {
+  margin: 60px 0;
+}
+
 /* 홈 섹션 디자인 */
-.hero {
+.fullpage {
   background: linear-gradient(to right, #6a11cb, #2575fc);
   color: white;
   padding: 80px 0;
 }
 
-.hero h1 {
+.fullpage h1 {
   font-size: 3em;
   font-weight: 700;
 }
@@ -125,24 +133,21 @@ body {
 }
 
 /* 연락처 섹션 */
-.contact-form input,
-.contact-form button {
-  margin-bottom: 15px;
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 1.1em;
+.contact-info {
+  background: #f9f9f9;
+  border: 2px dashed #00aaff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 170, 255, 0.05);
+  font-family: "Segoe UI", sans-serif;
 }
 
-.contact-form button {
-  background-color: #00aaff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.contact-info p {
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.contact-form button:hover {
-  background-color: #0077cc;
+.contact-info strong {
+  color: #007acc;
 }
 
 /* 푸터 */
@@ -152,4 +157,70 @@ body {
   padding: 20px;
 }
 
-.footer;
+/* 한 페이지 높이 */
+.fullpage {
+  height: 100vh;
+  align-items: center;
+}
+
+/* 프로필 이미지 */
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.photo-frame {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #00aaff;
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.3);
+  transition: transform 0.4s ease;
+}
+
+/* 창의적인 이미지 효과 */
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 170, 255, 0.2)
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 애니메이션 효과 */
+.creative-frame:hover .photo-overlay {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.15),
+    rgba(0, 170, 255, 0.4)
+  );
+  transition: background 0.4s ease-in-out;
+}
+.photo-frame:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+/* 네비게이션 강조 스타일 */
+.nav-link.active {
+  color: #00aaff;
+  font-weight: bold;
+  border-bottom: 2px solid #00aaff;
+}
+
+/* 스크롤 부드럽게 */
+html {
+  scroll-behavior: smooth;
+}
